@@ -1,0 +1,144 @@
+.flex(@a, @b, @c){
+    display: flex;
+    align-items: @c;
+    flex-direction: @a;
+    justify-content: @b;
+}
+//reset
+    *{
+        border: 0;
+        margin: 0;
+        padding: 0;
+        margin-top: 0;
+        color: #000000;
+        outline: none;
+        margin-left: 0;
+        font-size: 15px;
+        margin-right: 0;
+        list-style: none;
+        font-weight: 400;
+        margin-bottom: 0;
+        border-radius: 0;
+        line-height: 22px;
+        border-spacing: 0;
+        letter-spacing: 0;
+        box-sizing: border-box;
+        background-size: cover;
+        vertical-align: baseline;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'PingFang', 'Microsoft JhengHei';
+    }
+    img{
+        object-fit: cover;
+        object-position: center center;
+    }
+body{
+    .slideshow{
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+        .pageBox{
+            top: 0;
+            left: 0;
+            transition: .2s;
+            position: absolute;
+            height: calc(~'100% - 45px');
+            .flex(row, flex-start, center);
+            .page{
+                width: 100vw;
+                height: 100%;
+                position: relative;
+                .text{
+                    left: 30px;
+                    bottom: 30px;
+                    position: absolute;
+                    background-color: #fff;
+                    h2{
+                        
+                    }
+                    p{
+                        
+                    }
+                }
+                img{
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+        }
+        .control{
+            pointer-events: none;
+            .switch{
+                top: 0;
+                left: 0;
+                width: 100%;
+                position: absolute;
+                height: calc(~'100% - 45px');
+                .flex(row, space-between, center);
+                div{
+                    width: 90px;
+                    height: 100%;
+                    pointer-events: auto;
+                    .flex(row, center, center);
+                    button{
+                        width: 45px;
+                        height: 45px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        .flex(row, center, center);
+                        img{
+                            width: 36px;
+                            height: 36px;
+                            display: inline-block;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        button{
+                            img{
+                                transform: rotateY(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+            ul{
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 45px;
+                position: absolute;
+                .flex(row, center, center);
+                li{
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    pointer-events: auto;
+                    .flex(row, center, center);
+                    &:before{
+                        width: 10px;
+                        content: '';
+                        height: 10px;
+                        transition: .2s;
+                        border-radius: 50%;
+                        display: inline-block;
+                        background-color: #CCC;
+                    }
+                    &.now{
+                        &:before{
+                            width: 14px;
+                            height: 14px;
+                            background-color: #f0425c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  color: #000000;
+  outline: none;
+  margin-left: 0;
+  font-size: 15px;
+  margin-right: 0;
+  list-style: none;
+  font-weight: 400;
+  margin-bottom: 0;
+  border-radius: 0;
+  line-height: 22px;
+  border-spacing: 0;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  vertical-align: baseline;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'PingFang', 'Microsoft JhengHei';
+}
+img {
+  object-fit: cover;
+  object-position: center center;
+}
+body .slideshow {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+body .slideshow .pageBox {
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+  position: absolute;
+  height: calc(100% - 45px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+body .slideshow .pageBox .page {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+body .slideshow .pageBox .page .text {
+  left: 30px;
+  bottom: 30px;
+  position: absolute;
+  background-color: #fff;
+}
+body .slideshow .pageBox .page img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+body .slideshow .control {
+  pointer-events: none;
+}
+body .slideshow .control .switch {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: calc(100% - 45px);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .slideshow .control .switch div {
+  width: 90px;
+  height: 100%;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+body .slideshow .control .switch div button {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+body .slideshow .control .switch div button img {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+body .slideshow .control .switch div:nth-of-type(1) button img {
+  transform: rotateY(180deg);
+}
+body .slideshow .control ul {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+body .slideshow .control ul li {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+body .slideshow .control ul li:before {
+  width: 10px;
+  content: '';
+  height: 10px;
+  transition: 0.2s;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #CCC;
+}
+body .slideshow .control ul li.now:before {
+  width: 14px;
+  height: 14px;
+  background-color: #f0425c;
+}
